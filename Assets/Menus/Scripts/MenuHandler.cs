@@ -1,15 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using UnityEngine;
+
 
 public class MenuHandler : MonoBehaviour
 {
-    
+    #region Variables
+
     public AudioMixer masterAudio;
 
-    
+    //Variables for changing resolution
+    public Resolution[] resolutions;
+    public Dropdown resolution;
+
+    #endregion
+
+    #region Functions/Methods
+    //Function for changing the volume settings in Options Menu (when we put music into the game)
     public void ChangeVolume(float volume)
     {
         //float volume is the parameter name of the volume on the AudioMixer in Unity
@@ -37,7 +47,6 @@ public class MenuHandler : MonoBehaviour
             masterAudio.SetFloat("isMutedVolume", 20);
         }
     }
-        
 
     //Function to quit the game
     public void ExitGame()
@@ -48,6 +57,46 @@ public class MenuHandler : MonoBehaviour
         Application.Quit();
     }
 
-    //Function for changing the volume settings in Options Menu (when we put music into the game)
-   
+    //Function for changing quality setting in the options menu
+    public void ChangeQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    //Function for making the game full screen
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+    }
+
+    //Start function for setting up the resolution options for the Dropdown in Unity
+    private void Start()
+    {
+        resolutions = Screen.resolutions;
+        resolution.ClearOptions();
+        List<string> options = new List<string>();
+        int currentResolutionIndex = 0;
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + "x" + resolutions[i].height;
+            options.Add(option);
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }
+        resolution.AddOptions(options);
+        resolution.value = currentResolutionIndex;
+        resolution.RefreshShownValue();
+    }
+    
+    //Function that uses int as Index value which will connect to the dropdown element when interacting
+     public void SetResolution(int resolutionIndex)
+    {
+        Resolution res = resolutions[resolutionIndex];
+        Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+    }
+
+    #endregion
+
 }
