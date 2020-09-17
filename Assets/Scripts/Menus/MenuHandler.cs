@@ -11,6 +11,7 @@ public class MenuHandler : MonoBehaviour
     #region Variables
 
     public AudioMixer masterAudio;
+    public GameObject optionsMenu;
 
     //Variables for changing resolution
     public Resolution[] resolutions;
@@ -72,6 +73,21 @@ public class MenuHandler : MonoBehaviour
     //Start function for setting up the resolution options for the Dropdown in Unity
     private void Start()
     {
+        optionsMenu.SetActive(false);
+
+        StartResolution();
+
+    }
+    
+    //Function that uses int as Index value which will connect to the dropdown element when interacting
+     public void SetResolution(int resolutionIndex)
+    {
+        Resolution res = resolutions[resolutionIndex];
+        Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+    }
+
+    public void StartResolution()
+    {
         resolutions = Screen.resolutions;
         resolution.ClearOptions();
         List<string> options = new List<string>();
@@ -88,13 +104,6 @@ public class MenuHandler : MonoBehaviour
         resolution.AddOptions(options);
         resolution.value = currentResolutionIndex;
         resolution.RefreshShownValue();
-    }
-    
-    //Function that uses int as Index value which will connect to the dropdown element when interacting
-     public void SetResolution(int resolutionIndex)
-    {
-        Resolution res = resolutions[resolutionIndex];
-        Screen.SetResolution(res.width, res.height, Screen.fullScreen);
     }
 
     #endregion
