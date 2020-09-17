@@ -26,7 +26,6 @@ namespace Mechanics
         private void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>(); //connect rigidbody
-            checkGrounded = GetComponentInChildren<Transform>(); //connect grounded transform
         }
         #endregion
 
