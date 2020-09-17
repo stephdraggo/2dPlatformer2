@@ -16,6 +16,7 @@ namespace Mechanics
         [SerializeField, Range(1f, 7f)] private float speed = 4;
         [SerializeField, Range(4f, 10f)] private float jumpForce = 7;
         [SerializeField, Range(0.01f, 2f)] private float checkGroundedRadius = 0.05f;
+        [SerializeField] private float fallMultiplier=2.5f, lowJumpMultiplier=2f;
 
         private bool isGrounded = false;
         private PlayerState state;
@@ -47,7 +48,7 @@ namespace Mechanics
             }
             rigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rigidBody.velocity.y);
         }
-        void CheckGrounded()
+        void CheckGrounded() //comment this
         {
             Collider2D collider = Physics2D.OverlapCircle(checkGrounded.position, checkGroundedRadius, ground);
             if (collider != null)
@@ -57,6 +58,17 @@ namespace Mechanics
             else
             {
                 isGrounded = false;
+            }
+        }
+        void BetterJump() //understand and comment this
+        {
+            if (rigidBody.velocity.y < 0)
+            {
+                rigidBody.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime;
+            }
+            else if (rigidBody.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+            {
+                rigidBody.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
             }
         }
         #endregion
