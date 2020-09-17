@@ -26,14 +26,14 @@ public class MenuHandler : MonoBehaviour
         masterAudio.SetFloat("volume", volume);
     }
 
-    //Function to change from Main Menu scene to the game scene
-    public void ChangeScene(int sceneIndex)
+    
+    public void ChangeScene(int sceneIndex) //Function to change from Main Menu scene to the game scene
     {
         SceneManager.LoadScene(sceneIndex);
     }
 
-    //Function to mute volume when toggle is active
-    public void ToggleMute(bool isMuted)
+    
+    public void ToggleMute(bool isMuted) //Function to mute volume when toggle is active
     {
         //string reference isMuted connects to the AudioMixer master group Volume and isMuted parameters in Unity
         if (isMuted)
@@ -48,8 +48,8 @@ public class MenuHandler : MonoBehaviour
         }
     }
 
-    //Function to quit the game
-    public void ExitGame()
+    
+    public void ExitGame() //Function to quit the game
     {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
