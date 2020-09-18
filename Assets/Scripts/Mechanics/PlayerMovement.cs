@@ -13,8 +13,8 @@ namespace Mechanics
 
         [SerializeField] private Transform checkGrounded;
         [SerializeField] private LayerMask ground;
-        [SerializeField, Range(1f, 7f)] private float speed = 4;
-        [SerializeField, Range(4f, 10f)] private float jumpForce = 7;
+        [SerializeField, Range(1f, 10f)] private float speed = 4;
+        [SerializeField, Range(1f, 10f)] private float jumpForce = 7;
         [SerializeField, Range(0.01f, 2f)] private float checkGroundedRadius = 0.05f;
         [SerializeField] private float fallMultiplier=2.5f, lowJumpMultiplier=2f;
 
