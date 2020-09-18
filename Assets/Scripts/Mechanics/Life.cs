@@ -11,6 +11,7 @@ namespace Mechanics
         /// <summary>
         /// Stat types shared by player and enemies.
         /// Inheriting classes will have their own copies of these stats.
+        /// healthCurrent, healthMax, moveSpeed, attackDamage & attackSpeed
         /// </summary>
         [System.Serializable]
         public struct LifeStats

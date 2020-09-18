@@ -9,20 +9,52 @@ namespace Mechanics
     {
         #region Variables
         [Header("Life Variables")]
-        public LifeStats stats;
+        [SerializeField] private LifeStats stats;
+        public HealthDisplay healthDisplay;
+        #endregion
+        #region Properties
+        public LifeStats Stats
+        {
+            get
+            {
+                return stats;
+            }
+            set
+            {
+                stats = value;
+
+                healthDisplay.UpdateHearts(value.healthCurrent, value.healthMax); //update the heart display when health changes
+            }
+        }
         #endregion
 
         #region Start
         private void Start()
         {
-
+            healthDisplay.UpdateHearts(stats.healthCurrent, stats.healthMax);
         }
         #endregion
 
         #region Update
         private void Update()
         {
-
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                stats.healthCurrent -= 1;
+                healthDisplay.UpdateHearts(stats.healthCurrent, stats.healthMax);
+            }
+        }
+        private void LateUpdate()
+        {
+            if (stats.healthCurrent > stats.healthMax)
+            {
+                stats.healthCurrent = stats.healthMax;
+            }
+            else if (stats.healthCurrent < 0)
+            {
+                stats.healthCurrent = 0;
+                Debug.Log("Die.");
+            }
         }
         #endregion
 
