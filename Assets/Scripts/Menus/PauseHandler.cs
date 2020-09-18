@@ -6,7 +6,7 @@ public class PauseHandler : MonoBehaviour
 {
     //Variables for pause menu
     static bool isPaused;
-    public GameObject pauseMenu, optionsMenu;
+    public GameObject pauseMenu, optionsMenu, HUD, winPanel, deathPanel;
 
     public void Paused()
     {
@@ -15,6 +15,9 @@ public class PauseHandler : MonoBehaviour
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        HUD.SetActive(false);
+        
     }
 
     public void UnPaused()
@@ -23,6 +26,8 @@ public class PauseHandler : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
+
+        HUD.SetActive(true);
     }
 
     // Start is called before the first frame update
@@ -31,6 +36,10 @@ public class PauseHandler : MonoBehaviour
         isPaused = false;
         pauseMenu.SetActive (false);
         Time.timeScale = 1;
+
+        winPanel.SetActive(false);
+        deathPanel.SetActive(false);
+       
     }
 
     // Update is called once per frame
