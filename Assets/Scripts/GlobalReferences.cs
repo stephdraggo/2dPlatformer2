@@ -9,12 +9,13 @@ public class GlobalReferences : MonoBehaviour
     public static int tempScore;
 }
 
-//put global enums here
+//PlayerState affects behaviour towards enemy collision and animations
 public enum PlayerState
 {
     Idle,
     Running,
     Jumping,
+    Falling,
     Dead,
 }
 public enum EnemyState
