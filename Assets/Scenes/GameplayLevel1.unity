@@ -1859,28 +1859,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &1217263417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3086666264737554207, guid: 519669ab4032ab54bbbec113bc49901d,
-    type: 3}
-  m_PrefabInstance: {fileID: 3086666265163848215}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1217263418
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217263417}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!1 &1274693127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,6 +4907,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stats.moveSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
+        type: 3}
+      propertyPath: stats.attackDamage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8501541433853042291, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}

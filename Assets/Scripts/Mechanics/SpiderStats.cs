@@ -27,7 +27,14 @@ namespace Mechanics
         #endregion
 
         #region Functions
-
+        /// <summary>
+        /// Take an amount of damage from the health.
+        /// </summary>
+        /// <param name="damage">float amount of damage</param>
+        private void TakeDamage(float damage)
+        {
+            stats.healthCurrent -= damage;
+        }
         #endregion
     }
 }

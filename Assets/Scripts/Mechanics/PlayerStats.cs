@@ -35,14 +35,14 @@ namespace Mechanics
         private void Start()
         {
             player = GetComponent<PlayerMovement>(); //connect player movement script
-            healthDisplay.UpdateHearts(stats.healthCurrent, stats.healthMax); //display hearts according to health if loading in with injuries
+            healthDisplay.UpdateHearts(Stats.healthCurrent, Stats.healthMax); //display hearts according to health if loading in with injuries
         }
         #endregion
 
         #region Update
         private void Update()
         {
-            if (stats.healthCurrent <= 0) //if no health
+            if (Stats.healthCurrent <= 0) //if no health
             {
                 Death(); //call death function
             }
@@ -56,18 +56,21 @@ namespace Mechanics
         private void LateUpdate()
         {
             HealthBounds(); //keep health between 0 and max
+
+            healthDisplay.UpdateHearts(Stats.healthCurrent, Stats.healthMax); //update health display
         }
         #endregion
 
         #region Collisions and Triggers
-        private void OnTriggerEnter(Collider collider)
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            Debug.Log("trigger");
+            #region instant death collision
             if (collider.tag == "InstantDeath") //if collided with an instant death object
             {
-                Debug.Log("death collision");
                 stats.healthCurrent = 0; //health set to 0
             }
+            #endregion
+            #region enemy collision
             else if (collider.tag == "Enemy") //if collided with enemy object
             {
                 //takes care of if the object got mistagged
@@ -76,14 +79,15 @@ namespace Mechanics
                 {
                     if (player.State == PlayerState.Falling) //if falling
                     {
-                        //deal damage
+                        Damage(stats.attackDamage, enemy); //call damage to enemy
                     }
                     else //if not falling
                     {
-                        TakeDamage(enemy.stats.attackDamage); //call take damage function with attack value of enemy
+                        Damage(enemy.stats.attackDamage); //call damage to default (player)
                     }
                 }
             }
+            #endregion
         }
         #endregion
 
@@ -93,18 +97,30 @@ namespace Mechanics
         /// </summary>
         private void HealthBounds()
         {
-            if (stats.healthCurrent > stats.healthMax) //if health is more than max health
+            if (Stats.healthCurrent > Stats.healthMax) //if health is more than max health
             {
-                stats.healthCurrent = stats.healthMax; //set back to max
+                stats.healthCurrent = Stats.healthMax; //set back to max
             }
-            else if (stats.healthCurrent < 0) //if health is negative
+            else if (Stats.healthCurrent < 0) //if health is negative
             {
                 stats.healthCurrent = 0; //set to 0
             }
         }
-        private void TakeDamage(float damage)
+        /// <summary>
+        /// Damage the player (default) or an object with spider stats.
+        /// </summary>
+        /// <param name="damage">damage float</param>
+        /// <param name="spider">optional spider stats script</param>
+        private void Damage(float damage, SpiderStats spider = null)
         {
-            stats.healthCurrent -= damage;
+            if (spider != null) //if spider
+            {
+                spider.stats.healthCurrent -= damage; //damage spider
+            }
+            else //if player
+            {
+                stats.healthCurrent -= damage; //damage player
+            }
         }
         private void Death()
         {
