@@ -220,7 +220,7 @@ PrefabInstance:
     - target: {fileID: 3086666264737554207, guid: 519669ab4032ab54bbbec113bc49901d,
         type: 3}
       propertyPath: m_Name
-      value: Spider (1)
+      value: Spider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 519669ab4032ab54bbbec113bc49901d, type: 3}
@@ -4903,16 +4903,6 @@ PrefabInstance:
       propertyPath: healthDisplay
       value: 
       objectReference: {fileID: 723286971}
-    - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
-        type: 3}
-      propertyPath: stats.moveSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
-        type: 3}
-      propertyPath: stats.attackDamage
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8501541433853042291, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}
       propertyPath: m_Name
@@ -4972,21 +4962,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501541433853042294, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501541433853042295, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
-        type: 3}
-      propertyPath: jumpForce
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501541433853042295, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
-        type: 3}
-      propertyPath: lowJump
-      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 118f93cfb4d96554dbf9d6a75395c7e6, type: 3}

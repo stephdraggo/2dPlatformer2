@@ -100,7 +100,7 @@ MonoBehaviour:
   stats:
     healthCurrent: 10
     healthMax: 10
-    moveSpeed: 0
+    moveSpeed: 1
     attackDamage: 5
     attackSpeed: 1
 --- !u!114 &3086666264737554203

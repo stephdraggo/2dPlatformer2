@@ -70,6 +70,7 @@ namespace Mechanics
                 stats.healthCurrent = 0; //health set to 0
             }
             #endregion
+
             #region enemy collision
             else if (collider.tag == "Enemy") //if collided with enemy object
             {
