@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Mechanics
 {
     [AddComponentMenu("Mechanics/Life/Spider")]
-    public class SpiderStats : Life
+    public class EnemyStats : Life
     {
         #region Variables
         [Header("Life Variables")]

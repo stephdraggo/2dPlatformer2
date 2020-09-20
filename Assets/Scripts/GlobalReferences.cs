@@ -21,6 +21,5 @@ public enum PlayerState
 public enum EnemyState
 {
     Passive,
-    Aggro,
-    Attack,
+    Aggressive,
 }

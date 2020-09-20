@@ -75,7 +75,7 @@ namespace Mechanics
             else if (collider.tag == "Enemy") //if collided with enemy object
             {
                 //takes care of if the object got mistagged
-                collider.TryGetComponent<SpiderStats>(out SpiderStats enemy);
+                collider.TryGetComponent<EnemyStats>(out EnemyStats enemy);
                 if (enemy != null) //if there is a stats script on the object
                 {
                     if (player.State == PlayerState.Falling) //if falling
@@ -112,7 +112,7 @@ namespace Mechanics
         /// </summary>
         /// <param name="damage">damage float</param>
         /// <param name="spider">optional spider stats script</param>
-        private void Damage(float damage, SpiderStats spider = null)
+        private void Damage(float damage, EnemyStats spider = null)
         {
             if (spider != null) //if spider
             {

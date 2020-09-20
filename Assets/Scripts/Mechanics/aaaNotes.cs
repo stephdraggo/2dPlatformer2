@@ -15,7 +15,7 @@ public class aaaNotes : MonoBehaviour
                 -lose score
                 -retry/main menu
             *attack
-                -jump or mouse click?
+                -jump
             *states: idle, run, jump, death
 
         Enemy
