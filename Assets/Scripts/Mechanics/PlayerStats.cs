@@ -111,12 +111,12 @@ namespace Mechanics
         /// Damage the player (default) or an object with spider stats.
         /// </summary>
         /// <param name="damage">damage float</param>
-        /// <param name="spider">optional spider stats script</param>
-        private void Damage(float damage, EnemyStats spider = null)
+        /// <param name="target">optional target stats script</param>
+        private void Damage(float damage, EnemyStats target = null)
         {
-            if (spider != null) //if spider
+            if (target != null) //if spider
             {
-                spider.stats.healthCurrent -= damage; //damage spider
+                target.stats.healthCurrent -= damage; //damage spider
             }
             else //if player
             {

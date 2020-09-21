@@ -22,7 +22,10 @@ namespace Mechanics
         #region Update
         private void Update()
         {
-
+            if (stats.healthCurrent <= 0)
+            {
+                Die();
+            }
         }
         #endregion
 
@@ -34,6 +37,11 @@ namespace Mechanics
         private void TakeDamage(float damage)
         {
             stats.healthCurrent -= damage;
+        }
+        private void Die()
+        {
+            //animations
+            Destroy(gameObject);
         }
         #endregion
     }

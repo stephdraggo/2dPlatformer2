@@ -19,6 +19,9 @@ namespace Mechanics
 
         [SerializeField, Range(0.1f, 5f), Tooltip("The range for seeing the player.")]
         private float sightRange;
+
+        Vector2 target;
+        float sightDistance = 5;
         #endregion
 
         #region Start
@@ -47,7 +50,18 @@ namespace Mechanics
         }
         private void FixedUpdate()
         {
-            //do a raycast check for if player is in sight range
+            target = new Vector2(player.transform.position.x, player.transform.position.y);
+            RaycastHit2D hit = Physics2D.Raycast(target, transform.position, sightDistance);
+            Debug.Log("tag of object hit with raycast: " + hit.collider.gameObject.tag);
+
+            if (hit.collider != null && hit.collider.gameObject.tag == "Player")
+            {
+                state = EnemyState.Aggressive;
+            }
+            else
+            {
+                state = EnemyState.Passive;
+            }
         }
         #endregion
 

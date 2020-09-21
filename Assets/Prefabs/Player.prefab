@@ -257,8 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    healthCurrent: 50
-    healthMax: 50
+    healthCurrent: 40
+    healthMax: 40
     moveSpeed: 4
     attackDamage: 5
     attackSpeed: 1
@@ -321,7 +321,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8501541433853042291}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 63e9c03f903df134fa5f9da2cac2e4a2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
