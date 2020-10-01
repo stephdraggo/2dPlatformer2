@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Mechanics
 {
@@ -11,7 +12,7 @@ namespace Mechanics
         [Header("Life Variables")]
         [SerializeField] private LifeStats stats;
         public HealthDisplay healthDisplay;
-
+        public WinLose winLose;
         private PlayerMovement player;
         #endregion
 
@@ -87,6 +88,15 @@ namespace Mechanics
                         Damage(enemy.stats.attackDamage); //call damage to default (player)
                     }
                 }
+            }
+            #endregion
+            #region Player can pick up star collectable
+            //If the collider game object tagged with Collectables collides with player
+            if (collider.gameObject.CompareTag("Collectables"))
+            {
+                //Set star game object to false when player interacts with collectable
+                collider.gameObject.SetActive(false);
+                winLose.PickUpStar();
             }
             #endregion
         }
