@@ -3,25 +3,22 @@ using UnityEngine.UI;
 
 public class WinLose : MonoBehaviour
 {
-    /*Score
-            * game score
-                -stars collected
-                -enemies killed/spared?
-
-            * temp(level) score
-                -discard if level failed
-                -add to game score if level succeeded
-    */
-
+    #region VARIABLES
+    [Header("Collectables")]
     public int starCount = 0; //current stars collected
     public int finishStarCount = 10; //stars needed to finish the level
-    //public int sparedEnemy;
-    //public int killedEnemy;
-    public Collider2D starCollider;
-    public GameObject winPanel;//, secretWinPanel; 
-    //public GameObject secretWin;
     public Text starsCollected;
-    
+
+    [Header("Panels")]
+    public Collider2D starCollider;
+    public GameObject winPanel, secretWinPanel;
+
+    //[Header("Enemy Variables")]
+    //public int sparedEnemyCount; //how many enemies need to be spared to get secret win
+    //public int sparedEnemy; //how many enemies have been spared
+    //public int killedEnemy; //how many enemies have been killed
+    #endregion
+    //Function for completing the level and moving onto the next level
     public void CompleteLevel()
     {
         Debug.Log(gameObject);
@@ -33,8 +30,9 @@ public class WinLose : MonoBehaviour
         }
     }
 
-    //Secret function for if player spares more enemies than killed
-    /*public void SecretWin()
+    #region TEST SECRET WIN
+    /*Secret function for if player spares more enemies than killed THIS IS BEING TESTED
+    public void SecretWin()
     {
         if (sparedEnemy >= killedEnemy)
         {
@@ -46,10 +44,13 @@ public class WinLose : MonoBehaviour
             secretWinPanel.SetActive(false);
             finishStarCount /= 2; //Final star count divided by 2 (TEST)
         }
-
+        //Text UI to show how many extra stars received 
         starsCollected.text = "Extra Stars" + starCount;
-    }*/
+    }
+    */
+    #endregion
 
+    //Function for being able to pick up the stars and the text updating on screen
     public void PickUpStar()
     {
         starCount++;
@@ -60,14 +61,13 @@ public class WinLose : MonoBehaviour
 
     void Start()
     {
-        CompleteLevel();
-        PickUpStar();
-        //SecretWin();
+        
     }
 
 
     void Update()
     {
-        
+        CompleteLevel();
+        //SecretWin(); (TEST)
     }
 }
