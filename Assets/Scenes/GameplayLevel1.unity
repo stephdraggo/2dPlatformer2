@@ -1094,7 +1094,7 @@ PrefabInstance:
     - target: {fileID: 2947806062148175917, guid: bb5f6a7d4ebb90942abb48bfbe61a700,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.851
+      value: 1.393
       objectReference: {fileID: 0}
     - target: {fileID: 2947806062148175917, guid: bb5f6a7d4ebb90942abb48bfbe61a700,
         type: 3}
@@ -2715,8 +2715,6 @@ MonoBehaviour:
   pauseMenu: {fileID: 3175926035033006941}
   optionsMenu: {fileID: 609585947}
   HUD: {fileID: 5489458166106015108}
-  winPanel: {fileID: 2022301896}
-  deathPanel: {fileID: 5223345851091037299}
 --- !u!4 &1533742329
 Transform:
   m_ObjectHideFlags: 0
@@ -2745,13 +2743,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starCount: 0
   finishStarCount: 10
-  sparedEnemy: 5
-  killedEnemy: 0
   starCollider: {fileID: 2947806062148175907, guid: bb5f6a7d4ebb90942abb48bfbe61a700,
     type: 3}
   winPanel: {fileID: 2022301896}
-  losePanel: {fileID: 5223345851091037299}
-  secretWin: {fileID: 1125301066}
   starsCollected: {fileID: 790084585}
 --- !u!1001 &1543845360
 PrefabInstance:
@@ -3390,7 +3384,7 @@ Transform:
   - {fileID: 1953421837}
   - {fileID: 1543845361}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1970586290
 GameObject:
@@ -4961,7 +4955,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1533742327}
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -5166,7 +5160,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5223345852708228586}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1533742327}
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &5223345852708228588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5770,6 +5775,11 @@ PrefabInstance:
       propertyPath: starsText
       value: 
       objectReference: {fileID: 790084585}
+    - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
+        type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 5223345851091037299}
     - target: {fileID: 8501541433853042291, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}
       propertyPath: m_Name

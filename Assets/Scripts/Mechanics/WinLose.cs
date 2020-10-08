@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class WinLose : MonoBehaviour
@@ -17,11 +15,11 @@ public class WinLose : MonoBehaviour
 
     public int starCount = 0; //current stars collected
     public int finishStarCount = 10; //stars needed to finish the level
-    public int sparedEnemy;
-    public int killedEnemy;
+    //public int sparedEnemy;
+    //public int killedEnemy;
     public Collider2D starCollider;
-    public GameObject winPanel, losePanel;
-    public GameObject secretWin;
+    public GameObject winPanel;//, secretWinPanel; 
+    //public GameObject secretWin;
     public Text starsCollected;
     
     public void CompleteLevel()
@@ -31,22 +29,24 @@ public class WinLose : MonoBehaviour
         {
             winPanel.SetActive(true);
         }
-        else if (starCount <= finishStarCount)
-        {
-            losePanel.SetActive(true);
-            winPanel.SetActive(false);
-        }
     }
 
     //Secret function for if player spares more enemies than killed
-    public void SecretWin()
+    /*public void SecretWin()
     {
         if (sparedEnemy >= killedEnemy)
         {
-            secretWin.SetActive(true);
+            secretWinPanel.SetActive(true);
             finishStarCount *= 2; //End star count multiplied by 2 
         }
-    }
+        else if (sparedEnemy <= killedEnemy)
+        {
+            secretWinPanel.SetActive(false);
+            finishStarCount /= 2; //Final star count divided by 2 (TEST)
+        }
+
+        starsCollected.text = "Extra Stars" + starCount;
+    }*/
 
     public void PickUpStar()
     {
@@ -58,7 +58,9 @@ public class WinLose : MonoBehaviour
 
     void Start()
     {
-        
+        CompleteLevel();
+        PickUpStar();
+        //SecretWin();
     }
 
     

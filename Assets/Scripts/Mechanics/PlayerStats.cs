@@ -13,6 +13,7 @@ namespace Mechanics
         [SerializeField] private LifeStats stats;
         public HealthDisplay healthDisplay;
         public WinLose winLose;
+        public GameObject losePanel;
         private PlayerMovement player;
         #endregion
 
@@ -46,6 +47,7 @@ namespace Mechanics
             if (Stats.healthCurrent <= 0) //if no health
             {
                 Death(); //call death function
+                losePanel.SetActive(true); //Call game over panel
             }
 
 

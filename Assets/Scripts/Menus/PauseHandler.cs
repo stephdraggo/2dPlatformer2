@@ -6,7 +6,7 @@ public class PauseHandler : MonoBehaviour
 {
     //Variables for pause menu
     static bool isPaused;
-    public GameObject pauseMenu, optionsMenu, HUD, winPanel, deathPanel;
+    public GameObject pauseMenu, optionsMenu, HUD;
 
     public void Paused()
     {
@@ -36,9 +36,6 @@ public class PauseHandler : MonoBehaviour
         isPaused = false;
         pauseMenu.SetActive (false);
         Time.timeScale = 1;
-
-        winPanel.SetActive(false);
-        deathPanel.SetActive(false);
        
     }
 
