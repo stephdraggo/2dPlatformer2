@@ -24,9 +24,11 @@ public class WinLose : MonoBehaviour
     
     public void CompleteLevel()
     {
+        Debug.Log(gameObject);
         //If stars collected is greater or equal to finished star count, then the congrats menu pops up
         if (starCount >= finishStarCount)
         {
+            Debug.Log("get enough stars");
             winPanel.SetActive(true);
         }
     }
@@ -63,7 +65,7 @@ public class WinLose : MonoBehaviour
         //SecretWin();
     }
 
-    
+
     void Update()
     {
         
