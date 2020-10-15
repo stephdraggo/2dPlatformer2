@@ -1,53 +1,61 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class WinLose : MonoBehaviour
 {
+    //For checking how many enemies are left after all stars are collected (trigger bonus level)
+    List<Mechanics.EnemyMovement> enemyCheck = new List<Mechanics.EnemyMovement>(); 
+
+
     #region VARIABLES
     [Header("Collectables")]
     public int starCount = 0; //current stars collected
-    public int finishStarCount = 10; //stars needed to finish the level
+    public int requiredStarCount = 10; //stars needed to finish the level
     public Text starsCollected;
 
     [Header("Panels")]
     public Collider2D starCollider;
-    public GameObject winPanel, secretWinPanel;
+    public GameObject winPanel, bonusLevelPanel;
 
-    //[Header("Enemy Variables")]
-    //public int sparedEnemyCount; //how many enemies need to be spared to get secret win
-    //public int sparedEnemy; //how many enemies have been spared
-    //public int killedEnemy; //how many enemies have been killed
+    [Header("Enemy Variables")]
+    public int sparedEnemyCount; //how many enemies need to be spared to get bonus level
+    public int sparedEnemy; //how many enemies have been spared
+    public int killedEnemy; //how many enemies have been killed
     #endregion
+
+    #region Functions
     //Function for completing the level and moving onto the next level
     public void CompleteLevel()
     {
-        Debug.Log(gameObject);
-        //If stars collected is greater or equal to finished star count, then the congrats menu pops up
-        if (starCount >= finishStarCount)
+        //If stars collected is greater or equal to finished star count and if amount of enemies spared is greater than or equal to required enemies spared 
+        //==BONUS LEVEL
+        if (starCount >= requiredStarCount && sparedEnemy >= sparedEnemyCount)
         {
-            Debug.Log("get enough stars");
             winPanel.SetActive(true);
         }
     }
 
-    #region TEST SECRET WIN
-    /*Secret function for if player spares more enemies than killed THIS IS BEING TESTED
-    public void SecretWin()
+    #region TEST BONUS LEVEL
+    //If player collects all the stars without killing the spiders then BONUS LEVEL OF STARS in cave appears
+    //Look for list of enemies and check how many are left after all stars are collected
+    public void BonusLevel()
     {
-        if (sparedEnemy >= killedEnemy)
+
+
+        /*if (sparedEnemy >= killedEnemy)
         {
-            secretWinPanel.SetActive(true);
-            finishStarCount *= 2; //End star count multiplied by 2 
+            bonusLevelPanel.SetActive(true);
+            
         }
         else if (sparedEnemy <= killedEnemy)
         {
-            secretWinPanel.SetActive(false);
-            finishStarCount /= 2; //Final star count divided by 2 (TEST)
-        }
-        //Text UI to show how many extra stars received 
-        starsCollected.text = "Extra Stars" + starCount;
+            bonusLevelPanel.SetActive(false);
+        }*/
+        
+
     }
-    */
+    
     #endregion
 
     //Function for being able to pick up the stars and the text updating on screen
@@ -68,6 +76,7 @@ public class WinLose : MonoBehaviour
     void Update()
     {
         CompleteLevel();
-        //SecretWin(); (TEST)
+        BonusLevel(); //TEST
     }
+    #endregion
 }

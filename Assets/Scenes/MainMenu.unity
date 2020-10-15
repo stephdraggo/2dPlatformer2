@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 1053153338}
   - component: {fileID: 1053153337}
   m_Layer: 5
-  m_Name: Tutorial screen 2
+  m_Name: Tutorial Screen 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3368,6 +3368,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 108263053}
     m_Modifications:
+    - target: {fileID: 1954982372, guid: df0204b404dbd2c4da343f20a447e5a4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1111506583}
     - target: {fileID: 4305307930145696070, guid: df0204b404dbd2c4da343f20a447e5a4,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3398,16 +3402,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1111506583}
-    - target: {fileID: 4305307930692425821, guid: df0204b404dbd2c4da343f20a447e5a4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4305307930692425821, guid: df0204b404dbd2c4da343f20a447e5a4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 4305307930746426391, guid: df0204b404dbd2c4da343f20a447e5a4,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
