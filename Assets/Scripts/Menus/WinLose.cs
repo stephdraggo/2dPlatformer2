@@ -30,7 +30,7 @@ public class WinLose : MonoBehaviour
     {
         //If stars collected is greater or equal to finished star count and if amount of enemies spared is greater than or equal to required enemies spared 
         //==BONUS LEVEL
-        if (starCount >= requiredStarCount && sparedEnemy >= sparedEnemyCount)
+        if (starCount >= requiredStarCount && killedEnemy == 0)
         {
             winPanel.SetActive(true);
         }
@@ -64,8 +64,6 @@ public class WinLose : MonoBehaviour
         starCount++;
         starsCollected.text = "Stars Collected " + starCount;
     }
-
-
 
     void Start()
     {

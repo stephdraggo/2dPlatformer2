@@ -15,6 +15,7 @@ namespace Mechanics
         public WinLose winLose;
         public GameObject losePanel;
         private PlayerMovement player;
+        public MusicHandler musicHandler;
         #endregion
 
         #region Properties
@@ -99,6 +100,8 @@ namespace Mechanics
                 //Set star game object to false when player interacts with collectable
                 collider.gameObject.SetActive(false);
                 winLose.PickUpStar();
+                //Added in coin FX plays when player picks up a star A SUCCESS!
+                musicHandler.StarFX();
             }
             #endregion
         }

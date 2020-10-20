@@ -5,12 +5,11 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine;
 
-
 public class MenuHandler : MonoBehaviour
 {
     #region Variables
 
-    public AudioMixer masterAudio;
+    //public AudioMixer masterAudio;
     public GameObject optionsMenu;
 
     //Variables for changing resolution
@@ -21,12 +20,12 @@ public class MenuHandler : MonoBehaviour
 
     #region Functions/Methods
     //Function for changing the volume settings in Options Menu (when we put music into the game)
-    public void ChangeVolume(float volume)
+    /*public void ChangeVolume(float volume)
     {
         //float volume is the parameter name of the volume on the AudioMixer in Unity
         masterAudio.SetFloat("volume", volume);
     }
-
+    */
     
     public void ChangeScene(int sceneIndex) //Function to change from Main Menu scene to the game scene
     {
@@ -34,7 +33,7 @@ public class MenuHandler : MonoBehaviour
     }
 
     
-    public void ToggleMute(bool isMuted) //Function to mute volume when toggle is active
+    /*public void ToggleMute(bool isMuted) //Function to mute volume when toggle is active
     {
         //string reference isMuted connects to the AudioMixer master group Volume and isMuted parameters in Unity
         if (isMuted)
@@ -48,7 +47,7 @@ public class MenuHandler : MonoBehaviour
             masterAudio.SetFloat("isMutedVolume", 20);
         }
     }
-
+    */
     
     public void ExitGame() //Function to quit the game
     {
