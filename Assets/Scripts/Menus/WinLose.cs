@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WinLose : MonoBehaviour
 {
@@ -41,11 +42,12 @@ public class WinLose : MonoBehaviour
     //Look for list of enemies and check how many are left after all stars are collected
     public void BonusLevel()
     {
+        
 
-
-        /*if (sparedEnemy >= killedEnemy)
+        /*if (sparedEnemy >= sparedEnemyCount)
         {
-            bonusLevelPanel.SetActive(true);
+            
+            //bonusLevelPanel.SetActive(true);
             
         }
         else if (sparedEnemy <= killedEnemy)
