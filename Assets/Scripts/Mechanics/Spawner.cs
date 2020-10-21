@@ -67,6 +67,7 @@ namespace Mechanics
         {
 
             Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform); //summon enemy
+            WinLose.enemyCheck.Add(null);
             children.Add(null);
         }
         #endregion

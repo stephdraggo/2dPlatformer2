@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class WinLose : MonoBehaviour
 {
     //For checking how many enemies are left after all stars are collected (trigger bonus level)
-    List<Mechanics.EnemyMovement> enemyCheck = new List<Mechanics.EnemyMovement>(); 
+    public static List<Mechanics.EnemyMovement> enemyCheck = new List<Mechanics.EnemyMovement>(); 
 
 
     #region VARIABLES
