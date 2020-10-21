@@ -1,25 +1,55 @@
 fileFormatVersion: 2
-guid: b20240aff80a1d1458adcebfd17099f8
+guid: 7cb49fc0e99109b4eb95a27fe3340cb1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 739097547260485333
-    second: PC_Move_Spritesheet_0
+      213: 5954819629644871473
+    second: PC_Jump_Spritesheet_0
   - first:
-      213: -3627728543777958387
-    second: PC_Move_Spritesheet_1
+      213: 8098564604020956922
+    second: PC_Jump_Spritesheet_1
   - first:
-      213: -9167367617028789688
-    second: PC_Move_Spritesheet_2
+      213: -4961504402964233980
+    second: PC_Jump_Spritesheet_2
   - first:
-      213: -8744717698988642013
-    second: PC_Move_Spritesheet_3
+      213: -8410907890324882549
+    second: PC_Jump_Spritesheet_3
   - first:
-      213: -4564858848508089070
-    second: PC_Move_Spritesheet_4
+      213: -1522500056148424149
+    second: PC_Jump_Spritesheet_4
   - first:
-      213: 275713738779339804
-    second: PC_Move_Spritesheet_5
+      213: 4618759934124482172
+    second: PC_Jump_Spritesheet_5
+  - first:
+      213: -8408310323539536380
+    second: PC_Jump_Spritesheet_6
+  - first:
+      213: 6636005276606495413
+    second: PC_Jump_Spritesheet_7
+  - first:
+      213: 444702640956841479
+    second: PlayerJump_0
+  - first:
+      213: -7941400250425145444
+    second: PlayerJump_1
+  - first:
+      213: 496497603323687001
+    second: PlayerJump_2
+  - first:
+      213: 8691810124558177054
+    second: PlayerJump_3
+  - first:
+      213: -2098300212452292270
+    second: PlayerJump_4
+  - first:
+      213: -2178818368794951686
+    second: PlayerJump_5
+  - first:
+      213: 8744439205818513450
+    second: PlayerJump_6
+  - first:
+      213: -1831677882150188195
+    second: PlayerJump_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PC_Move_Spritesheet_0
+      name: PlayerJump_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ded2d6ad4dc14a00800000000000000
-      internalID: 739097547260485333
+      spriteID: 70e19e022b6eb2600800000000000000
+      internalID: 444702640956841479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC_Move_Spritesheet_1
+      name: PlayerJump_1
       rect:
         serializedVersion: 2
-        x: 100
+        x: 150
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,41 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d06d1962c18b7adc0800000000000000
-      internalID: -3627728543777958387
+      spriteID: c97063e2c8a7ac190800000000000000
+      internalID: -7941400250425145444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC_Move_Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84a649d19b7f6c080800000000000000
-      internalID: -9167367617028789688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PC_Move_Spritesheet_3
+      name: PlayerJump_2
       rect:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 321f5b2959584a680800000000000000
-      internalID: -8744717698988642013
+      spriteID: 950f0fd80f9e3e600800000000000000
+      internalID: 496497603323687001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC_Move_Spritesheet_4
+      name: PlayerJump_3
       rect:
         serializedVersion: 2
-        x: 400
+        x: 450
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21d60ec101d56a0c0800000000000000
-      internalID: -4564858848508089070
+      spriteID: e131f61d1438f9870800000000000000
+      internalID: 8691810124558177054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC_Move_Spritesheet_5
+      name: PlayerJump_4
       rect:
         serializedVersion: 2
-        x: 500
+        x: 600
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +233,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1c23a34f2883d300800000000000000
-      internalID: 275713738779339804
+      spriteID: 25987a4f21751e2e0800000000000000
+      internalID: -2098300212452292270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff71e9cc3843c1e0800000000000000
+      internalID: -2178818368794951686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28bfcea02d7a5970800000000000000
+      internalID: 8744439205818513450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b8f7bbba29496e0800000000000000
+      internalID: -1831677882150188195
       vertices: []
       indices: 
       edges: []
@@ -233,7 +305,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 41d9970feb32d8249bdbb48aeef166fe
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

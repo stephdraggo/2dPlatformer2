@@ -38,6 +38,54 @@ TextureImporter:
   - first:
       213: -7005406195134404153
     second: Native_Jump_Spritesheet_11
+  - first:
+      213: -3908297450402977538
+    second: SpiderJump_0
+  - first:
+      213: 3571626048186989696
+    second: SpiderJump_1
+  - first:
+      213: 6727113186874906208
+    second: SpiderJump_2
+  - first:
+      213: -6121143523768551127
+    second: SpiderJump_3
+  - first:
+      213: 7415888726570193647
+    second: SpiderJump_4
+  - first:
+      213: 2702269100194073583
+    second: SpiderJump_5
+  - first:
+      213: -2833459282941764551
+    second: SpiderJump_6
+  - first:
+      213: -864386421244083604
+    second: SpiderJump_7
+  - first:
+      213: -8388274048336221636
+    second: SpiderJump_8
+  - first:
+      213: -6049471428457846456
+    second: SpiderJump_9
+  - first:
+      213: 3329213033957664134
+    second: SpiderJump_10
+  - first:
+      213: -8687346792451196430
+    second: SpiderJump_11
+  - first:
+      213: 2218765168614548427
+    second: SpiderJump_0
+  - first:
+      213: 5003918824678869607
+    second: SpiderJump_1
+  - first:
+      213: 4603758290331083732
+    second: SpiderJump_2
+  - first:
+      213: -385400500593714784
+    second: SpiderJump_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,7 +171,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_0
+      name: SpiderJump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff6a53cd5d116e940800000000000000
-      internalID: 5324963219632400127
+      spriteID: bc3a7435a23aace10800000000000000
+      internalID: 2218765168614548427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_1
+      name: SpiderJump_1
       rect:
         serializedVersion: 2
         x: 120
@@ -158,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b611aff4fad46c940800000000000000
-      internalID: 5316021825513853291
+      spriteID: 76acfddb8ad717540800000000000000
+      internalID: 5003918824678869607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_2
+      name: SpiderJump_2
       rect:
         serializedVersion: 2
         x: 240
@@ -179,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23b3fb37c33c5c6e0800000000000000
-      internalID: -1817832210166760654
+      spriteID: 4d3a1f6f5c5d3ef30800000000000000
+      internalID: 4603758290331083732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_3
+      name: SpiderJump_3
       rect:
         serializedVersion: 2
         x: 360
@@ -200,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34400bf2d3b9e03e0800000000000000
-      internalID: -2085558890330586045
+      spriteID: 0a99ad16948c6aaf0800000000000000
+      internalID: -385400500593714784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_4
+      name: SpiderJump_4
       rect:
         serializedVersion: 2
         x: 480
@@ -221,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90fe65bf0c2d05e90800000000000000
-      internalID: -7038894491287752951
+      spriteID: fe25a0971878ae660800000000000000
+      internalID: 7415888726570193647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_5
+      name: SpiderJump_5
       rect:
         serializedVersion: 2
         x: 600
@@ -242,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fbdb916b69559300800000000000000
-      internalID: 258210871377648627
+      spriteID: feb059ced63608520800000000000000
+      internalID: 2702269100194073583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_6
+      name: SpiderJump_6
       rect:
         serializedVersion: 2
         x: 720
@@ -263,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a3e61b2bc476c4a0800000000000000
-      internalID: -6573438190150556765
+      spriteID: 93c19b26bc78da8d0800000000000000
+      internalID: -2833459282941764551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_7
+      name: SpiderJump_7
       rect:
         serializedVersion: 2
         x: 840
@@ -284,14 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc7f2ea4cc079e7a0800000000000000
-      internalID: -6347418177069975604
+      spriteID: c62431d21251104f0800000000000000
+      internalID: -864386421244083604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_8
+      name: SpiderJump_8
       rect:
         serializedVersion: 2
         x: 960
@@ -305,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5446743b91ef49940800000000000000
-      internalID: 5302142047657354309
+      spriteID: c3aaa4e223dd69b80800000000000000
+      internalID: -8388274048336221636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_9
+      name: SpiderJump_9
       rect:
         serializedVersion: 2
         x: 1080
@@ -326,14 +374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06eb39ad38e864b90800000000000000
-      internalID: -7257957052502000032
+      spriteID: 84925eb89c5fb0ca0800000000000000
+      internalID: -6049471428457846456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_10
+      name: SpiderJump_10
       rect:
         serializedVersion: 2
         x: 1200
@@ -347,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fea51bddcd28639f0800000000000000
-      internalID: -489059624399316241
+      spriteID: 685a5ae8d9db33e20800000000000000
+      internalID: 3329213033957664134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Jump_Spritesheet_11
+      name: SpiderJump_11
       rect:
         serializedVersion: 2
         x: 1320
@@ -368,8 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c961b78e2cc7ce90800000000000000
-      internalID: -7005406195134404153
+      spriteID: 2f9315bae18507780800000000000000
+      internalID: -8687346792451196430
       vertices: []
       indices: 
       edges: []

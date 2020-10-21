@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: 6471679919347929993
     second: Native_Move_Spritesheet_7
+  - first:
+      213: 5057328602326955724
+    second: SpiderMove_0
+  - first:
+      213: -5397047764560361571
+    second: SpiderMove_1
+  - first:
+      213: 1464408274874445305
+    second: SpiderMove_2
+  - first:
+      213: -5604374903987192006
+    second: SpiderMove_3
+  - first:
+      213: -9028566157527849425
+    second: SpiderMove_4
+  - first:
+      213: -4860829151080918102
+    second: SpiderMove_5
+  - first:
+      213: -2815976853645350924
+    second: SpiderMove_6
+  - first:
+      213: 4840963091611293810
+    second: SpiderMove_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +135,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_0
+      name: SpiderMove_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dfb3c7ebee8f5160800000000000000
-      internalID: 7016483888323346391
+      spriteID: cc6fe16a19d3f2640800000000000000
+      internalID: 5057328602326955724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_1
+      name: SpiderMove_1
       rect:
         serializedVersion: 2
         x: 100
@@ -146,14 +170,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 435f7679610d874d0800000000000000
-      internalID: -3136528345015519948
+      spriteID: d97409527a5d915b0800000000000000
+      internalID: -5397047764560361571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_2
+      name: SpiderMove_2
       rect:
         serializedVersion: 2
         x: 200
@@ -167,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d131aa87495f96a0800000000000000
-      internalID: -6440330778313149996
+      spriteID: 9fda806319f925410800000000000000
+      internalID: 1464408274874445305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_3
+      name: SpiderMove_3
       rect:
         serializedVersion: 2
         x: 300
@@ -188,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1004d7d4f76ff13a0800000000000000
-      internalID: -6692359494627934207
+      spriteID: a3fbab3d7b24932b0800000000000000
+      internalID: -5604374903987192006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_4
+      name: SpiderMove_4
       rect:
         serializedVersion: 2
         x: 400
@@ -209,14 +233,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1ed382dc65200aa0800000000000000
-      internalID: -6196911937943249381
+      spriteID: f2660754ae614b280800000000000000
+      internalID: -9028566157527849425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_5
+      name: SpiderMove_5
       rect:
         serializedVersion: 2
         x: 500
@@ -230,14 +254,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2452e1646cec2e9d0800000000000000
-      internalID: -2746405471767354046
+      spriteID: aa355ff04adda8cb0800000000000000
+      internalID: -4860829151080918102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_6
+      name: SpiderMove_6
       rect:
         serializedVersion: 2
         x: 600
@@ -251,14 +275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ac1485077503d30800000000000000
-      internalID: 4409120175224375827
+      spriteID: 4f72fb6a8f3abe8d0800000000000000
+      internalID: -2815976853645350924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_7
+      name: SpiderMove_7
       rect:
         serializedVersion: 2
         x: 700
@@ -272,8 +296,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98313c4299600d950800000000000000
-      internalID: 6471679919347929993
+      spriteID: 2789446884e8e2340800000000000000
+      internalID: 4840963091611293810
       vertices: []
       indices: 
       edges: []
