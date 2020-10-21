@@ -11,7 +11,7 @@ namespace Mechanics
 
         [SerializeField] private Transform checkGrounded;
         [SerializeField] private LayerMask ground;
-        [SerializeField, Range(1f, 10f)] private float jumpForce = 7;
+        [SerializeField, Range(1f, 20f)] private float jumpForce = 7;
         [SerializeField, Range(0.01f, 2f)] private float checkGroundedRadius = 0.05f;
 
         [SerializeField, Range(1f, 3f), Tooltip("Multiply gravity by this amount when player has reached the highest point of the jump so that it falls faster and feels less floaty.")]

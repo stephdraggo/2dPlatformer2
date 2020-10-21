@@ -11,8 +11,8 @@ namespace Mechanics
         [SerializeField, Tooltip("The enemy type to spawn here")]
         private GameObject enemyPrefab;
 
-        [SerializeField, Tooltip("The home platform for the enemies spawned here.")]
-        private GameObject homePlatform;
+        [SerializeField, Tooltip("The bounds for the enemies patrol.")]
+        private Transform leftBound,rightBound;
 
         [SerializeField, Range(1, 10), Tooltip("The number of living enemies allowed at this spawner at one time.")]
         private int spawnNumber = 1;
@@ -25,10 +25,7 @@ namespace Mechanics
         #endregion
 
         #region Properties
-        public GameObject HomePlatform
-        {
-            get => homePlatform;
-        }
+        
         #endregion
 
         #region Start
