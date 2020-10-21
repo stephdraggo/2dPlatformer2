@@ -66,9 +66,9 @@ namespace Mechanics
         private void SpawnNewEnemy()
         {
 
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform); //summon enemy
-            WinLose.enemyCheck.Add(null);
-            children.Add(null);
+            GameObject newEnemy= Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform); //summon enemy
+            WinLose.enemyCheck.Add(newEnemy.GetComponent<EnemyMovement>());
+            children.Add(newEnemy);
         }
         #endregion
     }
