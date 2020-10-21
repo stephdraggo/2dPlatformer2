@@ -42,7 +42,7 @@ public class WinLose : MonoBehaviour
     //Look for list of enemies and check how many are left after all stars are collected
     public void BonusLevel()
     {
-        SceneManager.LoadScene();
+        //SceneManager.LoadScene();
 
         /*if (sparedEnemy >= sparedEnemyCount)
         {
