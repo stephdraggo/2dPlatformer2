@@ -127,6 +127,7 @@ namespace Mechanics
             }
             else if (isGrounded) //if on ground
             {
+                animator.SetBool("isGrounded", true);
                 if (rigidBody.velocity.x == 0) //if not moving
                 {
                     state = PlayerState.Idle; //change state to idle
@@ -140,9 +141,10 @@ namespace Mechanics
             }
             else if (rigidBody.velocity.y > 0) //if jumping
             {
+                animator.SetBool("isGrounded", false);
                 if (state != PlayerState.Jumping)
                 {
-                    Debug.LogError("jump");
+                    animator.ResetTrigger("Fall");
                     animator.SetTrigger("Jump");
                 }
                 
@@ -150,9 +152,10 @@ namespace Mechanics
             }
             else if (rigidBody.velocity.y < 0) //if falling
             {
+                animator.SetBool("isGrounded", false);
+
                 if (state != PlayerState.Falling)
                 {
-                    Debug.LogError("fall");
                     animator.SetTrigger("Fall");
                 }
 
