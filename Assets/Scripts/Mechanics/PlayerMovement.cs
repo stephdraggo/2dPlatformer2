@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Animations;
 
 namespace Mechanics
 {
@@ -20,10 +21,14 @@ namespace Mechanics
         [SerializeField, Range(1f, 3f), Tooltip("Multiply gravity by this amount when the jump key is tapped lightly to have the player jump less high.")]
         private float lowJump = 2f;
 
+        [SerializeField] private Animator animator;
+        [SerializeField] private SpriteRenderer render;
+
         private bool isGrounded = false;
         private PlayerState state;
         private Rigidbody2D rigidBody;
         private PlayerStats stats; //need access to move speed
+
         #endregion
 
         #region Properties
@@ -46,12 +51,7 @@ namespace Mechanics
         {
             Move(); //call move function
 
-        }
-        private void FixedUpdate()
-        {
-            //in fixed update bc don't need to call every frame?
             CheckState(); //call function to check state of player
-
         }
         #endregion
 
@@ -67,6 +67,14 @@ namespace Mechanics
 
             //move horizontally according to player speed and jump/fall
             rigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * stats.Stats.moveSpeed, rigidBody.velocity.y);
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                render.flipX = false;
+            }
+            else if (Input.GetAxisRaw("Horizontal") < 0)
+            {
+                render.flipX = true;
+            }
         }
         /// <summary>
         /// Checks if the player is grounded byt overlapping a circle collided under the player.
@@ -115,24 +123,42 @@ namespace Mechanics
             if (stats.Stats.healthCurrent <= 0) //if no health
             {
                 state = PlayerState.Dead; //change state to dead
+
             }
             else if (isGrounded) //if on ground
             {
+                animator.SetBool("isGrounded", true);
                 if (rigidBody.velocity.x == 0) //if not moving
                 {
                     state = PlayerState.Idle; //change state to idle
+                    animator.SetBool("Moving", false);
                 }
                 else //if moving
                 {
                     state = PlayerState.Running; //change state to running
+                    animator.SetBool("Moving", true);
                 }
             }
             else if (rigidBody.velocity.y > 0) //if jumping
             {
+                animator.SetBool("isGrounded", false);
+                if (state != PlayerState.Jumping)
+                {
+                    animator.ResetTrigger("Fall");
+                    animator.SetTrigger("Jump");
+                }
+                
                 state = PlayerState.Jumping; //change state to jumping
             }
             else if (rigidBody.velocity.y < 0) //if falling
             {
+                animator.SetBool("isGrounded", false);
+
+                if (state != PlayerState.Falling)
+                {
+                    animator.SetTrigger("Fall");
+                }
+
                 state = PlayerState.Falling; //change state to falling
             }
         }
