@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: d9075d26dec020749b83c3185f9bb341
+guid: 1d4309461b66bd142a77eea8bea9b015
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7016483888323346391
-    second: Native_Move_Spritesheet_0
+      213: -1344975612705292502
+    second: SpiderJump2_0
   - first:
-      213: -3136528345015519948
-    second: Native_Move_Spritesheet_1
+      213: -20918182482321450
+    second: SpiderJump2_1
   - first:
-      213: -6440330778313149996
-    second: Native_Move_Spritesheet_2
+      213: -2199888706387306426
+    second: SpiderJump2_2
   - first:
-      213: -6692359494627934207
-    second: Native_Move_Spritesheet_3
+      213: 6388367899386514336
+    second: SpiderJump2_3
   - first:
-      213: -6196911937943249381
-    second: Native_Move_Spritesheet_4
+      213: -103331060311859504
+    second: SpiderJump2_4
   - first:
-      213: -2746405471767354046
-    second: Native_Move_Spritesheet_5
+      213: -3570795052870346716
+    second: SpiderJump2_5
   - first:
-      213: 4409120175224375827
-    second: Native_Move_Spritesheet_6
+      213: -2477512809642962389
+    second: SpiderJump2_6
   - first:
-      213: 6471679919347929993
-    second: Native_Move_Spritesheet_7
+      213: -4851264561943126220
+    second: SpiderJump2_7
+  - first:
+      213: -7604195514627955358
+    second: SpiderJump2_8
+  - first:
+      213: -9147266900017816781
+    second: SpiderJump2_9
+  - first:
+      213: 7542881535809869306
+    second: SpiderJump2_10
+  - first:
+      213: -8391284845243236097
+    second: SpiderJump2_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_0
+      name: SpiderJump2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dfb3c7ebee8f5160800000000000000
-      internalID: 7016483888323346391
+      spriteID: a2f33256ecfa55de0800000000000000
+      internalID: -1344975612705292502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_1
+      name: SpiderJump2_1
       rect:
         serializedVersion: 2
-        x: 100
+        x: 150
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,41 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 435f7679610d874d0800000000000000
-      internalID: -3136528345015519948
+      spriteID: 6df5bcb160fa5bff0800000000000000
+      internalID: -20918182482321450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d131aa87495f96a0800000000000000
-      internalID: -6440330778313149996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Native_Move_Spritesheet_3
+      name: SpiderJump2_2
       rect:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1004d7d4f76ff13a0800000000000000
-      internalID: -6692359494627934207
+      spriteID: 648146680ec6871e0800000000000000
+      internalID: -2199888706387306426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_4
+      name: SpiderJump2_3
       rect:
         serializedVersion: 2
-        x: 400
+        x: 450
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,41 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1ed382dc65200aa0800000000000000
-      internalID: -6196911937943249381
+      spriteID: 0ab0179e1ca08a850800000000000000
+      internalID: 6388367899386514336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2452e1646cec2e9d0800000000000000
-      internalID: -2746405471767354046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Native_Move_Spritesheet_6
+      name: SpiderJump2_4
       rect:
         serializedVersion: 2
         x: 600
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ac1485077503d30800000000000000
-      internalID: 4409120175224375827
+      spriteID: 0ded8d7b2f4e09ef0800000000000000
+      internalID: -103331060311859504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Native_Move_Spritesheet_7
+      name: SpiderJump2_5
       rect:
         serializedVersion: 2
-        x: 700
+        x: 750
         y: 0
-        width: 100
-        height: 100
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,8 +242,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98313c4299600d950800000000000000
-      internalID: 6471679919347929993
+      spriteID: 428d0fb71dcf17ec0800000000000000
+      internalID: -3570795052870346716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderJump2_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2250ced93b1e9dd0800000000000000
+      internalID: -2477512809642962389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderJump2_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f50f18598dcacb0800000000000000
+      internalID: -4851264561943126220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderJump2_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2656bfbd778787690800000000000000
+      internalID: -7604195514627955358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderJump2_9
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bdfbef7316e0180800000000000000
+      internalID: -9147266900017816781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderJump2_10
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5dcccfac2bda860800000000000000
+      internalID: 7542881535809869306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderJump2_11
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0882664ea2c8b80800000000000000
+      internalID: -8391284845243236097
       vertices: []
       indices: 
       edges: []
@@ -281,7 +377,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b08f90f6f6ac03b4f9f790786b89340c
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
