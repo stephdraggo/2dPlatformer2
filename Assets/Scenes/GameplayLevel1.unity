@@ -4361,10 +4361,11 @@ MonoBehaviour:
   starCollider: {fileID: 2947806062148175907, guid: bb5f6a7d4ebb90942abb48bfbe61a700,
     type: 3}
   winPanel: {fileID: 2022301896}
-  bonusLevelPanel: {fileID: 1125301066}
+  bonusButton: {fileID: 0}
   sparedEnemyCount: 10
   sparedEnemy: 10
   killedEnemy: 0
+  totalEnemies: 0
 --- !u!114 &1533742331
 MonoBehaviour:
   m_ObjectHideFlags: 0
