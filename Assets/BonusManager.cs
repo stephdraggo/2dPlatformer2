@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroy : MonoBehaviour
+public class BonusManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject); //Player gets carried over to bonus level from game level
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

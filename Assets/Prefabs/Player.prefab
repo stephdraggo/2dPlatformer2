@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4383305508308001762}
   - component: {fileID: 2599682057368562833}
+  - component: {fileID: 568845665}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2493404282063054065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8501541433853042292}
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ab9bccdbc3605cb4b922de0c27bb2014, type: 3}
   m_Color: {r: 0, g: 0.50179243, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -81,6 +82,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &568845665
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493404282063054065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3731d75e4ae54b4c92a534a2725cbf9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8501541433456893451
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +316,8 @@ MonoBehaviour:
     attackSpeed: 1
   healthDisplay: {fileID: 0}
   winLose: {fileID: 0}
-  starsText: {fileID: 0}
+  losePanel: {fileID: 0}
+  musicHandler: {fileID: 0}
 --- !u!114 &8501541433853042295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,10 +334,12 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 4
+  jumpForce: 7
   checkGroundedRadius: 0.05
   falling: 2.5
   lowJump: 2.5
+  animator: {fileID: 568845665}
+  render: {fileID: 2599682057368562833}
 --- !u!50 &8501541433853042294
 Rigidbody2D:
   serializedVersion: 4
@@ -359,9 +382,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024306476, y: -0.035046905}
+  m_Offset: {x: -0.024306476, y: 0.014551997}
   serializedVersion: 2
-  m_Radius: 0.09315398
+  m_Radius: 0.09995729
 --- !u!58 &530963173
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -375,7 +398,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01944518, y: 0.18278235}
+  m_Offset: {x: -0.01944518, y: 0.2158621}
   serializedVersion: 2
   m_Radius: 0.094130486
 --- !u!1 &8501541433965749464
