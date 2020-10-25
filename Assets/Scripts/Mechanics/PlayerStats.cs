@@ -12,13 +12,17 @@ namespace Mechanics
         [Header("Life Variables")]
         [SerializeField] private LifeStats stats;
         public HealthDisplay healthDisplay;
-        public WinLose winLose;
-        public GameObject losePanel;
+        //public WinLose winLose; 
+        //public GameObject losePanel;
         private PlayerMovement player;
         public MusicHandler musicHandler;
         #endregion
 
         #region Properties
+        //public DataType PublicObjectName { get => privateObjectName}
+        public GameObject losePanel { get => losePanel; }
+        public WinLose winLose { get => winLose; }
+
         public LifeStats Stats
         {
             get
