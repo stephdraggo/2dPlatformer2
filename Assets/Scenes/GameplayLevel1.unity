@@ -4874,6 +4874,11 @@ PrefabInstance:
       propertyPath: musicHandler
       value: 
       objectReference: {fileID: 1533742331}
+    - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
+        type: 3}
+      propertyPath: winLoseS
+      value: 
+      objectReference: {fileID: 1533742330}
     - target: {fileID: 8501541433853042291, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}
       propertyPath: m_Name

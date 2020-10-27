@@ -16,12 +16,14 @@ namespace Mechanics
         //public GameObject losePanel;
         private PlayerMovement player;
         public MusicHandler musicHandler;
+        public GameObject losePanel;
         #endregion
 
         #region Properties
         //public DataType PublicObjectName { get => privateObjectName}
-        public GameObject losePanel { get => losePanel; }
-        public WinLose winLose { get => winLose; }
+        [SerializeField]
+        private WinLose winLoseS;
+        public WinLose WinLoseS { get => winLoseS; }
 
         public LifeStats Stats
         {
@@ -103,7 +105,7 @@ namespace Mechanics
             {
                 //Set star game object to false when player interacts with collectable
                 collider.gameObject.SetActive(false);
-                winLose.PickUpStar();
+                WinLoseS.PickUpStar();
                 //Added in coin FX plays when player picks up a star A SUCCESS!
                 musicHandler.StarFX();
             }
