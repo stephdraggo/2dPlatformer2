@@ -121,7 +121,7 @@ MonoBehaviour:
   player: {fileID: 0}
   spawner: {fileID: 0}
   patrolSequence: []
-  sightRange: 0
+  sightRange: 0.1
 --- !u!50 &142983514334228233
 Rigidbody2D:
   serializedVersion: 4
@@ -205,7 +205,7 @@ Animator:
   m_GameObject: {fileID: 3086666264737554207}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec4ba57923cd8dd48a0f072a3fe74211, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7d40e645e95b72b4184121459d760c76, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

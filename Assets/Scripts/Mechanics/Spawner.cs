@@ -13,6 +13,7 @@ namespace Mechanics
 
         [SerializeField, Tooltip("The bounds for the enemies patrol.")]
         private Transform leftBound,rightBound;
+        private Transform[] patrolPoints;
 
         [SerializeField, Range(1, 10), Tooltip("The number of living enemies allowed at this spawner at one time.")]
         private int spawnNumber = 1;
@@ -25,7 +26,17 @@ namespace Mechanics
         #endregion
 
         #region Properties
-        
+        public Transform[] PatrolPoints
+        {
+            get
+            {
+                patrolPoints = new Transform[2];
+                patrolPoints[0] = leftBound;
+                patrolPoints[1] = rightBound;
+
+                return patrolPoints;
+            }
+        }
         #endregion
 
         #region Start
@@ -56,10 +67,6 @@ namespace Mechanics
         #endregion
 
         #region Functions
-        public Transform[] PatrolSequence()
-        {
-            return null;
-        }
         private void SpawnNewEnemy()
         {
 

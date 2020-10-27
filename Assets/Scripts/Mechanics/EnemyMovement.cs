@@ -33,7 +33,7 @@ namespace Mechanics
 
             spawner = GetComponentInParent<Spawner>(); //connect parent spawner
 
-            patrolSequence = spawner.PatrolSequence(); //get patrol sequence from spawner
+            patrolSequence = spawner.PatrolPoints; //get patrol sequence from spawner
 
             state = EnemyState.Passive; //enemies start passive
 
@@ -51,7 +51,7 @@ namespace Mechanics
         private void FixedUpdate()
         {
             target = new Vector2(player.transform.position.x, player.transform.position.y);
-            RaycastHit2D hit = Physics2D.Raycast(target, transform.position, sightDistance);
+            RaycastHit2D hit = Physics2D.Raycast(target, transform.position, sightRange);
             Debug.Log("tag of object hit with raycast: " + hit.collider.gameObject.tag);
 
             if (hit.collider != null && hit.collider.gameObject.tag == "Player")
