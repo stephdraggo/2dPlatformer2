@@ -20,6 +20,7 @@ public enum PlayerState
 }
 public enum EnemyState
 {
-    Passive,
-    Aggressive,
+    Idle,
+    Wander,
+    Chase,
 }
