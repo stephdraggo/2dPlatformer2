@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class WinLose : MonoBehaviour
 {
     //For checking how many enemies are left after all stars are collected (trigger bonus level)
-    public static List<Mechanics.EnemyMovement> enemyCheck = new List<Mechanics.EnemyMovement>(); 
-
+    public static List<Mechanics.EnemyMovement> enemyCheck = new List<Mechanics.EnemyMovement>();
+    public MusicHandler music;
 
     #region VARIABLES
     [Header("Collectables")]
@@ -59,6 +60,8 @@ public class WinLose : MonoBehaviour
         {
             bonusLevelPanel.SetActive(true);
             winPanel.SetActive(false);
+            HUD.SetActive(false);
+            music.StarFX();
         }
         else if (sparedEnemy <= killedEnemy)
         {
@@ -85,7 +88,7 @@ public class WinLose : MonoBehaviour
     void Update()
     {
         CompleteLevel();
-        BonusLevel(); //TEST
+        BonusLevel(); 
     }
     #endregion
 }

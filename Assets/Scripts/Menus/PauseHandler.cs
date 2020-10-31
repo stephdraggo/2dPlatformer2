@@ -15,7 +15,6 @@ public class PauseHandler : MonoBehaviour
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
         HUD.SetActive(false);
         
     }
@@ -26,7 +25,6 @@ public class PauseHandler : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
-
         HUD.SetActive(true);
     }
 

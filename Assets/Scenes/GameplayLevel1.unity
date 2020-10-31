@@ -2231,6 +2231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae06d883a266ea24f97aa3119a8ae356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 1533742331}
   starCount: 0
   requiredStarCount: 10
   starsCollected: {fileID: 790084585}

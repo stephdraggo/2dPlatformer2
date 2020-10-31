@@ -12,8 +12,6 @@ namespace Mechanics
         [Header("Life Variables")]
         [SerializeField] private LifeStats stats;
         public HealthDisplay healthDisplay;
-        //public WinLose winLose; 
-        //public GameObject losePanel;
         private PlayerMovement player;
         public MusicHandler musicHandler;
         public GameObject losePanel;
@@ -56,6 +54,7 @@ namespace Mechanics
                 Death(); //call death function
                 losePanel.SetActive(true); //Call game over panel
             }
+           
 
 
 #if UNITY_EDITOR
@@ -63,6 +62,7 @@ namespace Mechanics
             DebugCommands();
 #endif
         }
+        
         private void LateUpdate()
         {
             HealthBounds(); //keep health between 0 and max
