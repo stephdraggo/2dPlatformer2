@@ -18,7 +18,7 @@ public class WinLose : MonoBehaviour
 
     [Header("Panels")]
     public Collider2D starCollider;
-    public GameObject winPanel, bonusButton, bonusLevelPanel, HUD;
+    public GameObject winPanel, bonusLevelPanel, HUD;
 
     [Header("Enemy Variables")]
     public int sparedEnemyCount; //how many enemies need to be spared to get bonus level
@@ -35,16 +35,15 @@ public class WinLose : MonoBehaviour
         //If you collect all stars = win!
         if (starCount >= requiredStarCount)
         {
-            winPanel.SetActive(true);
 
             if (enemyCheck.Count >= totalEnemies / 2)
             {
-                bonusButton.SetActive(true);
+                bonusLevelPanel.SetActive(true);
                 winPanel.SetActive(false);
             }
             else
             {
-                bonusButton.SetActive(false);
+                winPanel.SetActive(true);
                 bonusLevelPanel.SetActive(false);
                 
             }
