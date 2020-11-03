@@ -64,7 +64,6 @@ namespace Mechanics
         {
             target = new Vector2(player.transform.position.x, player.transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(target, transform.position, sightRange);
-            Debug.Log("tag of object hit with raycast: " + hit.collider.gameObject.tag);
 
             if (hit.collider != null && hit.collider.gameObject.tag == "Player")
             {

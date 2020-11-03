@@ -1768,7 +1768,7 @@ MonoBehaviour:
     type: 3}
   leftBound: {fileID: 1324026791}
   rightBound: {fileID: 1724506457}
-  spawnNumber: 1
+  spawnNumber: 2
   children: []
   spawnTimer: 0
 --- !u!4 &1089558519
