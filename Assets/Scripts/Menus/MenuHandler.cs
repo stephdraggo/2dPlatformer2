@@ -8,6 +8,7 @@ public class MenuHandler : MonoBehaviour
 {
     #region Variables
     public GameObject optionsMenu;
+   
     
 
     //Variables for changing resolution
@@ -20,6 +21,7 @@ public class MenuHandler : MonoBehaviour
     public void ChangeScene(int sceneIndex) //Function to change from Main Menu scene to the game scene
     {
         SceneManager.LoadScene(sceneIndex);
+        
     }
 
     
@@ -47,7 +49,7 @@ public class MenuHandler : MonoBehaviour
     private void Start()
     {
         optionsMenu.SetActive(false);
-
+        
         StartResolution();
 
     }

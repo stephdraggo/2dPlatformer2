@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 56736170}
   - component: {fileID: 56736169}
   - component: {fileID: 56736168}
-  - component: {fileID: 56736172}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -226,18 +225,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &56736172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56736167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e21385485899b684fb813ff9654bfb8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &163022534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -683,6 +670,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2947806062148175917, guid: bb5f6a7d4ebb90942abb48bfbe61a700,
     type: 3}
   m_PrefabInstance: {fileID: 539762587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &563208518 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2947806062148175907, guid: bb5f6a7d4ebb90942abb48bfbe61a700,
+    type: 3}
+  m_PrefabInstance: {fileID: 2947806062339788933}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &609585944
 PrefabInstance:
@@ -2235,12 +2228,9 @@ MonoBehaviour:
   starCount: 0
   requiredStarCount: 10
   starsCollected: {fileID: 790084585}
-  starCollider: {fileID: 2947806062148175907, guid: bb5f6a7d4ebb90942abb48bfbe61a700,
-    type: 3}
+  starCollider: {fileID: 563208518}
   winPanel: {fileID: 2022301896}
-  bonusButton: {fileID: 1915127483}
   bonusLevelPanel: {fileID: 1125301066}
-  HUD: {fileID: 5489458166106015108}
   sparedEnemyCount: 10
   sparedEnemy: 10
   killedEnemy: 0
@@ -4270,9 +4260,9 @@ PrefabInstance:
       objectReference: {fileID: 723286971}
     - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}
-      propertyPath: winLose
+      propertyPath: musicHandler
       value: 
-      objectReference: {fileID: 1533742330}
+      objectReference: {fileID: 1533742331}
     - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}
       propertyPath: losePanel
@@ -4280,9 +4270,9 @@ PrefabInstance:
       objectReference: {fileID: 5223345851091037299}
     - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}
-      propertyPath: musicHandler
+      propertyPath: starsCollected
       value: 
-      objectReference: {fileID: 1533742331}
+      objectReference: {fileID: 790084585}
     - target: {fileID: 8501541433853042290, guid: 118f93cfb4d96554dbf9d6a75395c7e6,
         type: 3}
       propertyPath: winLoseS

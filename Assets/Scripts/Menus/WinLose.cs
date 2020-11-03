@@ -18,7 +18,7 @@ public class WinLose : MonoBehaviour
 
     [Header("Panels")]
     public Collider2D starCollider;
-    public GameObject winPanel, bonusLevelPanel, HUD;
+    public GameObject winPanel, bonusLevelPanel;
 
     [Header("Enemy Variables")]
     public int sparedEnemyCount; //how many enemies need to be spared to get bonus level
@@ -40,18 +40,20 @@ public class WinLose : MonoBehaviour
             {
                 bonusLevelPanel.SetActive(true);
                 winPanel.SetActive(false);
+
             }
             else
             {
                 winPanel.SetActive(true);
                 bonusLevelPanel.SetActive(false);
-                
+
             }
+
         }
     }
 
-    #region BONUS LEVEL
-    //If player collects all the stars without killing the spiders then BONUS LEVEL OF STARS in cave appears
+    #region BONUS LEVEL NOT NEEDED ANYMORE
+    /*If player collects all the stars without killing the spiders then BONUS LEVEL OF STARS in cave appears
     //Look for list of enemies and check how many are left after all stars are collected
     public void BonusLevel()
     {
@@ -66,12 +68,11 @@ public class WinLose : MonoBehaviour
         {
             bonusLevelPanel.SetActive(false);
         }
-        
-    }
-
+ }
+    */
     #endregion
 
-    //Function for being able to pick up the stars and the text updating on screen
+    //Player can pick up star collectable
     public void PickUpStar()
     {
         starCount++;
@@ -80,6 +81,8 @@ public class WinLose : MonoBehaviour
 
     void Start()
     {
+        totalEnemies = 2;
+        winPanel.SetActive(false);
         
     }
 
@@ -87,7 +90,6 @@ public class WinLose : MonoBehaviour
     void Update()
     {
         CompleteLevel();
-        BonusLevel(); 
     }
     #endregion
 }

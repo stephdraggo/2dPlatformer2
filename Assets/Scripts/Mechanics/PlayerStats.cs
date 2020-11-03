@@ -43,6 +43,7 @@ namespace Mechanics
         {
             player = GetComponent<PlayerMovement>(); //connect player movement script
             healthDisplay.UpdateHearts(Stats.healthCurrent, Stats.healthMax); //display hearts according to health if loading in with injuries
+            
         }
         #endregion
 
@@ -54,8 +55,8 @@ namespace Mechanics
                 Death(); //call death function
                 losePanel.SetActive(true); //Call game over panel
             }
-           
 
+            
 
 #if UNITY_EDITOR
             //debug commands does not make it into the build, only functional in unity
@@ -68,6 +69,8 @@ namespace Mechanics
             HealthBounds(); //keep health between 0 and max
 
             healthDisplay.UpdateHearts(Stats.healthCurrent, Stats.healthMax); //update health display
+
+            
         }
         #endregion
 
@@ -88,7 +91,7 @@ namespace Mechanics
                 collider.TryGetComponent<EnemyStats>(out EnemyStats enemy);
                 if (enemy != null) //if there is a stats script on the object
                 {
-                    if (player.State == PlayerState.Falling) //if falling
+                    if (player.State == PlayerState.Falling) //if falling 
                     {
                         Damage(stats.attackDamage, enemy); //call damage to enemy
                     }
@@ -100,13 +103,16 @@ namespace Mechanics
             }
             #endregion
 
-            #region Player can pick up star collectable
+            #region 
+            
             //If the collider game object tagged with Collectables collides with player
             if (collider.gameObject.CompareTag("Collectables"))
             {
+                winLoseS.PickUpStar();
+
                 //Set star game object to false when player interacts with collectable
                 collider.gameObject.SetActive(false);
-                WinLoseS.PickUpStar();
+                
                 //Added in coin FX plays when player picks up a star A SUCCESS!
                 musicHandler.StarFX();
             }
@@ -115,6 +121,7 @@ namespace Mechanics
         #endregion
 
         #region Functions
+        
         /// <summary>
         /// Keeps health between 0 and max health value.
         /// </summary>

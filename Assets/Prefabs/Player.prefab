@@ -315,9 +315,12 @@ MonoBehaviour:
     attackDamage: 5
     attackSpeed: 1
   healthDisplay: {fileID: 0}
-  winLose: {fileID: 0}
-  losePanel: {fileID: 0}
   musicHandler: {fileID: 0}
+  losePanel: {fileID: 0}
+  starCount: 0
+  requiredStarCount: 10
+  starsCollected: {fileID: 0}
+  winLoseS: {fileID: 0}
 --- !u!114 &8501541433853042295
 MonoBehaviour:
   m_ObjectHideFlags: 0

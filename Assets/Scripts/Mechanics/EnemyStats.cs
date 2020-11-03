@@ -40,6 +40,7 @@ namespace Mechanics
         }
         private void Die()
         {
+            WinLose.enemyCheck.RemoveAt(0);
             //animations
             Destroy(gameObject);
         }
