@@ -99,6 +99,7 @@ namespace Mechanics
                 }
             }
             #endregion
+
             #region Player can pick up star collectable
             //If the collider game object tagged with Collectables collides with player
             if (collider.gameObject.CompareTag("Collectables"))

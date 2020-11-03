@@ -15,7 +15,7 @@ namespace Mechanics
         #region Start
         private void Start()
         {
-
+            stats.moveSpeed = Random.Range(0.01f, 1f);
         }
         #endregion
 
