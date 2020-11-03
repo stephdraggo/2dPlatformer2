@@ -13,8 +13,12 @@ public class MusicHandler : MonoBehaviour
     
     [Header("Sound Effects")]
     public Slider SFXSlider;
-    public AudioSource starPickUpFX; 
+    public AudioSource starPickUpFX;
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     public void StarFX()
     {
         starPickUpFX.Play(); //Coin sound will play when collected

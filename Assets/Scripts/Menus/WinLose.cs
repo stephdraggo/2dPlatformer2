@@ -29,12 +29,21 @@ public class WinLose : MonoBehaviour
     #endregion
 
     #region Functions
+    private void Awake()
+    {
+        for (int i = 0; i < enemyCheck.Count; i++)
+        {
+            enemyCheck.RemoveAt(0);
+        }
+        
+    }
     //Function for completing the level and moving onto the next level
     public void CompleteLevel()
     {
         //If you collect all stars = win!
         if (starCount >= requiredStarCount)
         {
+            Time.timeScale = 0;
 
             if (enemyCheck.Count >= totalEnemies / 2)
             {
@@ -81,6 +90,7 @@ public class WinLose : MonoBehaviour
 
     void Start()
     {
+        
         totalEnemies = 2;
         winPanel.SetActive(false);
         

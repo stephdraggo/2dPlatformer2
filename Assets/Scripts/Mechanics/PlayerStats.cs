@@ -154,6 +154,7 @@ namespace Mechanics
         }
         private void Death()
         {
+            Time.timeScale = 0;
             Debug.Log("Died.");
         }
         #endregion
